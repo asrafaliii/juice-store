@@ -1,0 +1,12 @@
+.banner-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+}
+.banner-tex{
+    width: 100%;
+}
+.banner-img img{
+    width: 100%;
+    height: 100%;
+}

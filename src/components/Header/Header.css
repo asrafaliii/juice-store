@@ -1,9 +1,11 @@
-.header{
+.nav-container{
     height: 60px;
     background-color: ghostwhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
+}
+.nav-link Link{
+    text-decoration: none;
+    color: #000;
 }

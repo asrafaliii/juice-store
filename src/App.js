@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home';
 import Deshboard from './components/Deshboard/Deshboard';
 import Blogs from './components/Bglogs/Blogs';
