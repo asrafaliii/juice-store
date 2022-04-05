@@ -39,10 +39,9 @@ const Home = () => {
                 <h2 className='mt-5' >Ratings and Reviews</h2>
                 
                     {
-                        reviews.map(activity => <Activity
+                        reviews.slice(0,3).map(activity => <Activity
                         key={activity.id}
                         activity={activity}
-                        
                         ></Activity>)
                     }  
                
