@@ -2,12 +2,19 @@ import React from 'react';
 import img from '../Image/banner.jpg';
 import "./Home.css";
 import useReviews from '../../hooks/useReviews';
-import Reviews from '../Reviews/Reviews';
-import { useState, useEffect } from 'react';
+// import Reviews from '../Reviews/Reviews';
+// import { useState, useEffect } from 'react';
 import Activity from '../Activity/Activity';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
+
+
+    const navigate = useNavigate();
+    const showAllReviews = () => {
+        navigate ('/reviews');
+    }
 
    
 
@@ -39,7 +46,7 @@ const Home = () => {
                         ></Activity>)
                     }  
                
-                <button type="button" className="btn btn-outline-danger mt-3">See all reviews...</button>
+                <button onClick={showAllReviews} type="button" className="btn btn-outline-danger mt-3">See all reviews...</button>
             </div>
         </div>
         
