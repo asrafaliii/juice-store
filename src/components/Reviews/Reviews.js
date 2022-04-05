@@ -1,11 +1,23 @@
 import React from 'react';
+import useReviews from '../../hooks/useReviews';
+import Activity from '../Activity/Activity';
 
-const Reviews = (props) => {
-    console.log(props.review.name);
+const Reviews = () => {
+    const [reviews, setReviews] = useReviews();
+
+
     return (
-        <div>
-            <h1>Reviews</h1>
-           
+        <div className='container'>
+            <h3 className='mt-1 text-center' >Ratings and Reviews</h3>
+            <div>
+                {
+                    reviews.map(activity => <Activity
+                    key={activity.id}
+                    activity={activity}
+                    ></Activity>)
+                }  
+            </div>
+            
         </div>
     );
 };

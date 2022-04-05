@@ -3,9 +3,16 @@ import img from '../Image/banner.jpg';
 import "./Home.css";
 import useReviews from '../../hooks/useReviews';
 import Reviews from '../Reviews/Reviews';
+import { useState, useEffect } from 'react';
+import Activity from '../Activity/Activity';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
+
+   
+
+
+
     return (
         <div className='container main-container'>
             <div className="banner-container">
@@ -19,18 +26,20 @@ const Home = () => {
                     <img src={img} alt=""></img>
                 </div>
             </div>
+
+
             <div className='reviews-container'>
-                <h3> Ratings and Reviews{reviews.length}</h3>
-                {
-                    reviews.map(review => <Reviews
-                    key={review.id}
-                    review={review}
-                    
-                    ></Reviews>)
-                }
-
-
-                {/* <button type="button" className="btn btn-outline-danger">See all reviews...</button> */}
+                <h2 className='mt-5' >Ratings and Reviews</h2>
+                
+                    {
+                        reviews.map(activity => <Activity
+                        key={activity.id}
+                        activity={activity}
+                        
+                        ></Activity>)
+                    }  
+               
+                <button type="button" className="btn btn-outline-danger mt-3">See all reviews...</button>
             </div>
         </div>
         

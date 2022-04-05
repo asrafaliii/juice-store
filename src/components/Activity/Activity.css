@@ -1,0 +1,20 @@
+.activity-container{
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.img-name{
+    display: flex;
+    align-items: center;
+    
+}
+.img-name h4{
+    padding-left: 10px;
+}
+.img-name img{
+    width: 30px;
+    border-radius: 100%;
+    
+}
